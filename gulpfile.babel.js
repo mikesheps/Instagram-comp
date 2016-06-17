@@ -45,7 +45,7 @@ gulp.task('serve', ['stylus', 'jade', 'imgs'], function() {
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('stylus', function() {
-  return gulp.src(stylusPath)
+  return gulp.src('src/stylus/style.styl')
   	//.pipe(plumber())
     .pipe(plumber({
       errorHandler: function (error) {
