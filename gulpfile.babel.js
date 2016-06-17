@@ -10,11 +10,12 @@ import todo from 'gulp-todo';
 import changed from 'gulp-changed';
 import imagemin from 'gulp-imagemin';
 import pngquant from 'imagemin-pngquant';
+import evilicons from 'gulp-evil-icons';
 
 const defaultBrowser = 'google chrome canary';
 
 
-const stylusPath = 'src/stylus/style.styl';
+const stylusPath = 'src/stylus/**/*.styl';
 const jadePath = 'src/jade/*.jade';
 const distPath = './dist';
 const imgPath = 'src/img/**/*';
@@ -44,7 +45,7 @@ gulp.task('serve', ['stylus', 'jade', 'imgs'], function() {
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('stylus', function() {
-  return gulp.src(stylusPath)
+  return gulp.src('src/stylus/style.styl')
   	//.pipe(plumber())
     .pipe(plumber({
       errorHandler: function (error) {
@@ -80,6 +81,7 @@ gulp.task('jade', function() {
       locals: YOUR_LOCALS,
       pretty: true
     }))
+    .pipe(evilicons())
     .pipe(gulp.dest(distPath))
 });
 

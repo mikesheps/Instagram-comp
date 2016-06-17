@@ -1,37 +1,25 @@
-# Jordan and Scotty
+# Instagram-comp
 
-This is a single webpage style tribute to Michael Jordan. Just practicing some stuff here.
-
-## Todo
-- [] Practice building this in HTML as fast as I can
-- [] Practice building this in Markdown as fast as I can
-- [] Practice building this in Jade as fast as I can
+Just turning this Instagram-comp into a static one page site as a proof of concept.
 
 
 ## Setting up the project
-1. Open this project in Atom and your terminal
-2. In your terminal run
-	- `git init` then
-	- `git status` then
-	- `git add .` then
-	- `git status` then  
-	- `git commit -m 'Initial commit'`
-	- `git status` then
-3. Then go to GitHub and create a repo called `jordan-tribute`
-4. Follow the instructions from GitHub to "push and existing git repo"
-5. Create a new branch called mike `gcob mike`
-6. Push that branch `git push`
-7. Run `npm install`
-8. Go to gitHub and include `gandhishepard` to the repo
+1. Clone this repo
+1. Open it in a text editor and the terminal
+7. Run `npm install` in the terminal to get all the dependencies
+8. Then run `gulp` in the terminal. That's it!
 
-### Fire it up
-Open project in the Terminal and run `gulp`. That's it!
 
 ### Gulp
 The gulpfile will:
 - pre-process stylus into CSS
-- automatically launch the brower with your project in Chrome Canary
+- processed Jade templates into html
+- optimize images for you
+- automatically launch the browser with your project in Chrome Canary (must have Canary installed.)
 - automatically refresh the browser on save
 - make a list of your TODOs by running `gulp todo`
 
 ### Notes
+- just a proof of concept
+- no responsive settings
+- could be polished more, but this is fine for now
